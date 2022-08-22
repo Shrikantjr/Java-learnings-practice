@@ -1,0 +1,28 @@
+public class learning {
+    public static void main(String[]args){
+        System.out.println("avgff");
+        
+        int a = 1;
+        int b = 2;
+        int c = a+ b;
+
+        int result = c;
+        //abbreviating
+        result++; //result + 1
+        System.out.println("value: " + result);
+        result--; //result -1
+        System.out.println("value: " + result);
+        result+=2; // result +2
+        System.out.println("value: " + result);
+        result *= 10; //result *10
+        System.out.println("value: " + result);
+        
+        /*
+        result looks like this
+        value: 4
+value: 3
+value: 5
+value: 50
+         */
+    }
+}
