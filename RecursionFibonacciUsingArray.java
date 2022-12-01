@@ -1,27 +1,20 @@
 public class RecursionFibonacciUsingArray {
 
-    public static int printFib(int n) {
-      if(n == 0){
-         return 0;
+    public static int[] printFib(int currentValue, int n, int[] output) {
+      output[currentValue] = output[currentValue - 1] + output[currentValue - 2];
+      if(currentValue == 9) {
+         return output;
       }
-
-        int[] num = new int[n + 2];
-         num [0]= 0;
-         num [1] = 1;
-
-         for(int i=2; i<=n; i++){
-            num[i] = num[i-1] + num[i-2];
-         }
-         return num[n];
-        
+      return printFib(currentValue + 1, n, output);
     }
 
     public static void main(String [] args){
-         int n= 10;
-        
-         for(int i= 0; i< n; i++){
-            System.out.print(printFib(i) + " ");
-         }
+         int output[] = new int[10];
+         output[0] = 0;
+         output[1] = 1;
+         // output should be an array of length n
+         // initial value of output = [0, 1]
+        int result[] = printFib(2, 10,  output);
     }
     
 }
